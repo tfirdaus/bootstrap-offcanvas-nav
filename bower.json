@@ -16,7 +16,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {
+  "devDependencies": {
     "bootstrap": "~3.1.1",
     "jasny-bootstrap": "~3.1.3"
   }
