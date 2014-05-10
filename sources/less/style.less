@@ -105,6 +105,7 @@ body {
 }
 .bg-overlay {
     .opacity(0);
+    display: none;
     .close {
         .opacity(1);
         font-size: (@font-size-base * 2);
@@ -112,6 +113,7 @@ body {
         outline: 0;
     }
     &.visible {
+        display: block;
         position: absolute;
         top: 0;
         left: 0;
@@ -119,7 +121,6 @@ body {
         height: 100%;
         background-color: #000;
         .opacity(0.5);
-        .transition(opacity 320ms);
     }
 }
 @media (min-width: 768px) {

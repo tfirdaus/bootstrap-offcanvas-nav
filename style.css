@@ -153,6 +153,7 @@ body {
   -webkit-opacity: 0;
   -moz-opacity: 0;
   opacity: 0;
+  display: none;
 }
 .bg-overlay .close {
   zoom: 1;
@@ -165,6 +166,7 @@ body {
   outline: 0;
 }
 .bg-overlay.visible {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -176,10 +178,6 @@ body {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
   opacity: 0.5;
-  -webkit-transition: opacity 320ms;
-  -moz-transition: opacity 320ms;
-  -o-transition: opacity 320ms;
-  transition: opacity 320ms;
 }
 @media (min-width: 768px) {
   .masthead,
