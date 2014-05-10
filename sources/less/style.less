@@ -1,0 +1,136 @@
+@import 'variables.less';
+@import (reference) 'bootstrap.less';
+@import (reference) 'lesshat.less';
+
+html {
+  background: url('@{path-img}office.jpg') no-repeat center center fixed; 
+  .background-size(cover);
+}
+body {
+    color: #fff;
+    background-color: fade(#000, 48%);
+    font-weight: 400;
+    position: relative;
+    text-rendering: geometricPrecision;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    .box-shadow(0 100px 80px -50px fade(#000, 30%) inset);
+}
+html,
+body {
+    height: 100%;
+}
+.site-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+.inner {
+    padding: 30px;
+    text-align: center;
+}
+.navmenu-site {
+    border: 0;
+    li a, .dropdown-menu li a {
+        padding: 12px 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .dropdown .caret {
+        margin-left: 10px;
+    }
+    .navmenu-nav.dropdown-menu {
+        background-color: lighten(@navmenu-inverse-bg, 3%);
+    }
+    .has-button {
+        margin: 5px 0;
+        padding: 5px 18px;
+        .navmenu-btn {
+            background-color: lighten(@navmenu-inverse-bg, 3%);
+            border: 1px solid lighten(@navmenu-inverse-bg, 8%);
+            &:hover {
+                background-color: lighten(@navmenu-inverse-bg, 1%);
+            }
+        }
+    }
+}
+.masthead {
+    position: absolute;
+    top: 0;
+}
+.masthead-brand {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    text-align: left;
+    margin-top: -15px;
+    a {
+        .text-hide();
+        display: inline-block;
+        background-image: url('@{path-img}tutsplus-logo.svg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 85px;
+        height: 29px;
+    }
+}
+.masthead-toggle {
+    display: block;
+    border-color: transparent;
+    .border-radius(@border-radius-small);
+    &:hover,
+    &:focus {
+        background-color: @navbar-inverse-toggle-hover-bg;
+    }
+    .icon-bar {
+        background-color: @navbar-inverse-toggle-icon-bar-bg;
+    }
+}
+.cover {
+    padding: 0 20px;
+}
+.btn-more {
+    padding: 10px 20px;
+    font-weight: 600;
+    .border-radius(@border-radius-small);
+}
+.bg-overlay {
+    .opacity(0);
+    .close {
+        .opacity(1);
+        font-size: (@font-size-base * 2);
+        padding: 15px 30px;
+        outline: 0;
+    }
+    &.visible {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        .opacity(0.5);
+        .transition(opacity 320ms);
+    }
+}
+@media (min-width: 768px) {
+    .masthead,
+    .cover-container {
+        width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .masthead,
+    .cover-container {
+        width: 700px;
+    }
+}

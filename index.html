@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A demonstration on adding off-canvas menu to Bootstrap with Jasny Bootstrap">
+
+    <title>Bootstrap Off-canvas Menu</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Arvo:400|Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.1/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="offcanvas" class="navmenu navmenu-inverse navmenu-fixed-right navmenu-site offcanvas" data-placement="right" role="navigation">
+        <ul class="nav navmenu-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <span class="caret"></span></a>
+                <ul class="dropdown-menu navmenu-nav">
+                    <li><a href="#">Design &amp; Illustration</a></li>
+                    <li><a href="#">Code</a></li>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Music &amp; Audio</a></li>
+                    <li><a href="#">Photography</a></li>
+                    <li><a href="#">3D &amp; Motion Graphic</a></li>
+                    <li><a href="#">Game Development</a></li>
+                    <li><a href="#">Computer Skill</a></li>
+                    <li><a href="#">Craft &amp; DIY</a></li>
+                    <li><a href="#">Business</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Courses <span class="caret"></span></a>
+                <ul class="dropdown-menu navmenu-nav">
+                    <li><a href="#">Design &amp; Illustration</a></li>
+                    <li><a href="#">Code</a></li>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Music &amp; Audio</a></li>
+                    <li><a href="#">Photography</a></li>
+                    <li><a href="#">3D &amp; Motion Graphic</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Bundles</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Premium</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li class="has-button"><a class="btn navmenu-btn">Create and Account</a></li>
+            <li class="has-button"><a class="btn navmenu-btn">Sign in</a></li>
+        </ul>
+    </div>
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead">
+                    <div class="inner clearfix">
+                        <h3 class="masthead-brand"><a href="https://tutsplus.com/">Tuts+</a></h3>
+                        <button type="button" class="navbar-toggle masthead-toggle" data-recalc="false" data-toggle="offcanvas" data-target="#offcanvas" data-canvas="body">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="inner cover">
+                    <h1 class="cover-heading">Invest in yourself. Learn new skills.</h1>
+                    <p class="lead cover-lead">Video-based courses to help you learn creative and technical skills.</p>
+                    <p class="lead cover-lead">
+                        <a href="#" class="btn btn-lg btn-success btn-more">Find out more...</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" class="bg-overlay"><button type="button" class="close" aria-hidden="true">&times;</button></div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+        (function() {
+            var $offCanvas = $('#offcanvas'),
+                $dropdown  = $offCanvas.find('.dropdown'),
+                $overlay = $('#overlay');
+
+            $offCanvas.on('shown.bs.offcanvas', function() {
+                $overlay.addClass('visible');
+            }).on('hide.bs.offcanvas', function() {
+                $overlay.removeClass('visible');
+            });
+
+            $dropdown.on('show.bs.dropdown', function(){
+                $(this).find('.dropdown-menu').slideDown(350);
+            }).on('hide.bs.dropdown', function(){
+                $(this).find('.dropdown-menu').slideUp(350);
+            });
+        })();
+    </script>
+</body>
+
+</html>

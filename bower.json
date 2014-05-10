@@ -1,0 +1,23 @@
+{
+  "name": "Bootstrap Off-canvas Menu Demo",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tfirdaus/bootstrap-offcanvas-menu",
+  "authors": [
+    "Thoriq Firdaus <tfirdaus@creatiface.com>"
+  ],
+  "description": "A demonstration of adding off-canvas menu to Bootstrap using Jasny Bootstrap",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "jasny-bootstrap": "~3.1.3"
+  }
+}
