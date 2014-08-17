@@ -1,10 +1,14 @@
-@import 'variables.less';
-@import (reference) 'bootstrap.less';
-@import (reference) 'lesshat.less';
+//Import
+@import (reference) 'app.less';
+
+// Variables
+@path-img: '../../assets/img/';
+
+//Styles
 
 html {
-  background: url('@{path-img}office.jpg') no-repeat center center fixed; 
-  .background-size(cover);
+    background: url('@{path-img}office.jpg') no-repeat center center fixed; 
+    background-size: cover;
 }
 body {
     color: #fff;
@@ -86,7 +90,7 @@ body {
 .masthead-toggle {
     display: block;
     border-color: transparent;
-    .border-radius(@border-radius-small);
+    border-radius: @border-radius-small;
     &:hover,
     &:focus {
         background-color: @navbar-inverse-toggle-hover-bg;
@@ -101,7 +105,7 @@ body {
 .btn-more {
     padding: 10px 20px;
     font-weight: 600;
-    .border-radius(@border-radius-small);
+    border-radius: @border-radius-small;
 }
 .bg-overlay {
     .opacity(0);
