@@ -108,11 +108,11 @@ body {
   background-color: transparent;
   border: 0;
   display: inline-block;
-  background-image: url('../../assets/img/tutsplus-logo.svg');
+  background-image: url('../../assets/img/logo.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  width: 85px;
-  height: 29px;
+  width: 100px;
+  height: 33px;
 }
 .masthead-toggle {
   display: block;
