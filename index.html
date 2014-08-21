@@ -75,20 +75,11 @@
         </div>
     </div>
 
-    <div id="overlay" class="bg-overlay"><button type="button" class="close" aria-hidden="true">&times;</button></div>
-
     <script src="assets/js/app.min.js"></script>
     <script>
         (function() {
             var $offCanvas = $('#offcanvas'),
-                $dropdown  = $offCanvas.find('.dropdown'),
-                $overlay = $('#overlay');
-
-            $offCanvas.on('shown.bs.offcanvas', function() {
-                $overlay.addClass('visible');
-            }).on('hide.bs.offcanvas', function() {
-                $overlay.removeClass('visible');
-            });
+                $dropdown  = $offCanvas.find('.dropdown');
 
             $dropdown.on('show.bs.dropdown', function(){
                 $(this).find('.dropdown-menu').slideDown(350);
